@@ -1,22 +1,31 @@
 {
   "name": "app-privacy-india",
   "version": "1.0.0",
-  "description": "Tracking permissions across covid apps used in India",
+  "description": "tracking covid surveillance and privacy feelings",
   "main": "index.html",
   "scripts": {
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-  "type": "git",
-  "url": "git+https://github.com/divyansha-s/app-privacy-india.git"
+    "type": "git",
+    "url": "git+https://github.com/divyansha-s/app-privacy-india.git"
   },
+  "keywords": [
+    "privacy",
+    "covid",
+    "heroku"
+  ],
   "author": "Divyansha Sehgal",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/divyansha-s/app-privacy-india/issues"
   },
+  "homepage": "https://github.com/divyansha-s/app-privacy-india#readme",
   "engines": {
-    "node": "16.12"
+    "node": "16.13.2"
   },
-  "homepage": "https://github.com/divyansha-s/app-privacy-india#readme"
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
 }
