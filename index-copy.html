@@ -49,40 +49,46 @@
 
 <!-- split page -->
 <div class="container">
-  <div class = "row align-items-start flex-wrap">
+  <div class = "row row-cols-2">
 
     <!-- col 1 -->
-    <div class = "col border bg-light p-5 rounded"> 
+    <div class = "col border bg-light rounded"> 
           <h2 id = "questions">  Which of the following information are you comfortable sharing with friends? </h2>
           <!-- include image here -->
     </div>
 
 
     <!-- col 2 -->
-    <div class = "col border p-3 offset-md-1">
+    <div class = "col border offset-md-1">
       <!--  <img src="phone.png" class="img-fluid"> offset-md-1-->
       <iframe class="embed-responsive-item ratio ratio-1x1 w-100" id = "frameUpdate" src="../pg1/pg1.html" onload="resizeIframe(this)" ></iframe>
     </div>
 
 
-  </div> 
+  
  
 
     <!--new row-->
-
-   
-      <div class="row flex-wrap">
-
       
-      <div class="col-4">
-     <img src="../images/friends.png" id = "downloaded" class = "img-fluid " alt="An image with friends">
+      <div class="col">
+     <img src="" id = "downloaded" class = "img-fluid border" alt="An image with friends">
       </div>
 
-      <div class = "col"></div>
-
-      <div class="col align-self-center">
+      <div class="col"> here</div>
         
-            <nav aria-label="iphoneQuestions">
+    </div>
+ 
+</div>
+        <!-- navigation row --> 
+
+    <div class="row"> 
+
+      <div class="col-5"></div>
+
+    <div class = "col">
+      
+
+          <nav aria-label="iphoneQuestions">
             <ul class="pagination">
               <li class="page-item page-link" onclick = "frameNav(q1, '../pg1/pg1.html', '../images/friends.png')"> 
                1 </li>
@@ -97,46 +103,15 @@
               </li>
             </ul>
           </nav>
-
-
-      </div>
-        
-    </div>
- 
-
-        <!-- navigation row 
-
-    <div class="row"> 
-
-      <div class="col-5"></div>
-
-    <div class = "container col">
-      
-
-          <nav aria-label="iphoneQuestions">
-            <ul class="pagination">
-              <li class="page-item page-link" onclick = "frameNav(q1, '../pg1/pg1.html', '../images/friends.png')"> 
-               1 </li>
-              <li class="page-item page-link" onclick = "frameNav(q2, '../pg1/pg1.html', '../images/family.png')">
-                  2
-              </li>
-              <li class="page-item page-link" onclick = "frameNav(q3, '../pg1/pg1.html', '../images/employers.png')">3</li>
-              <li class="page-item page-link" onclick = "frameNav(q4, '../pg1/pg1.html', '../images/gov.png')">4</li>
-              <li class="page-item page-link" onclick = "frameNav(q5, '../pg1/pg1.html', '../images/law enforcement.png')">5</li>
-              <li class="page-item">
-                <a class="page-link" href="viz.html">  </a>
-              </li>
-            </ul>
-          </nav> --> 
         
 
     </div>
 
-   <!-- <div class="col"></div>
+    <div class="col"></div>
 
-    </div> 
+    </div>
 
-  </div> -->
+
 
 
 
