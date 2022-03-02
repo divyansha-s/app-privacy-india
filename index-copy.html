@@ -18,79 +18,58 @@
   </head>
   <body>
 
-<!-- Nav Bar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fixed navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="cover.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="cover.html">App</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="viz.html">Navigation</a>
-        </li>
-        <!--
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li> -->
-      </ul>
-    </div>
-  </div>
-</nav>
 
+
+<h1 class = "text-center">Privacy Feelings</h2>
+<br>
 
 
 <!-- split page -->
 <div class="container">
-  <div class = "row row-cols-2">
+  <div class = "row align-items-start flex-wrap">
 
     <!-- col 1 -->
-    <div class = "col border bg-light rounded"> 
-          <h2 id = "questions">  Which of the following information are you comfortable sharing with friends? </h2>
-          <!-- include image here -->
+    <div class = "col-md-6 border bg-light p-5 rounded align-self-center"> 
+          <h3 id = "questions">  Which of the following information are you comfortable sharing with friends? </h3>
+          
     </div>
 
+    <div class = "col"></div>
 
-    <!-- col 2 -->
-    <div class = "col border offset-md-1">
-      <!--  <img src="phone.png" class="img-fluid"> offset-md-1-->
-      <iframe class="embed-responsive-item ratio ratio-1x1 w-100" id = "frameUpdate" src="../pg1/pg1.html" onload="resizeIframe(this)" ></iframe>
-    </div>
+    <!-- col 3 -->
 
+    <div class="col-md-5">
+     <img src="../images/friends.png" id = "downloaded" class = "img-fluid" alt="An image with friends">
+      </div>
 
-  
+    </div> 
  
 
     <!--new row-->
-      
-      <div class="col">
-     <img src="" id = "downloaded" class = "img-fluid border" alt="An image with friends">
+
+   
+      <div class="row">
+
+      <div class = "col-2"></div>
+
+      <div class = "col">  
+        <iframe class="embed-responsive-item w-100" id = "frameUpdate" src="../pg1/pg1.html" onload="resizeIframe(this)"></iframe>
       </div>
 
-      <div class="col"> here</div>
-        
     </div>
- 
-</div>
-        <!-- navigation row --> 
 
-    <div class="row"> 
+    <br>
+<!--navbar-->
 
-      <div class="col-5"></div>
+    <div class = "row">
 
-    <div class = "col">
-      
+      <div class = "col"></div>
 
-          <nav aria-label="iphoneQuestions">
+      <div class="col align-self-center">
+        
+            <nav aria-label="iphoneQuestions">
             <ul class="pagination">
-              <li class="page-item page-link" onclick = "frameNav(q1, '../pg1/pg1.html', '../images/friends.png')"> 
+              <li class="page-item page-link" onclick = "frameNav(q1, '../pg1/pg1.html', '../images/friends.png')">
                1 </li>
               <li class="page-item page-link" onclick = "frameNav(q2, '../pg1/pg1.html', '../images/family.png')">
                   2
@@ -98,20 +77,30 @@
               <li class="page-item page-link" onclick = "frameNav(q3, '../pg1/pg1.html', '../images/employers.png')">3</li>
               <li class="page-item page-link" onclick = "frameNav(q4, '../pg1/pg1.html', '../images/gov.png')">4</li>
               <li class="page-item page-link" onclick = "frameNav(q5, '../pg1/pg1.html', '../images/law enforcement.png')">5</li>
-              <li class="page-item">
-                <a class="page-link" href="viz.html"> ---> </a>
+
+               <li class="page-item">
+                <a class="page-link" href="viz.html"> Apps </a>
+              
               </li>
             </ul>
           </nav>
+
+      </div>
+
+       <div class = "col"></div>
         
+    </div>
+ 
+
+              
 
     </div>
 
-    <div class="col"></div>
+   <!-- <div class="col"></div>
 
-    </div>
+    </div> 
 
-
+  </div> -->
 
 
 
@@ -124,8 +113,8 @@
     <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
 -->
     <footer class="pt-3 mt-4 text-muted border-top">
-
-      &copy; 2021 Company, Inc
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> 
+        Divyansha Sehgal, Centre for Internet and Society
 
   </footer>
 </div>
@@ -139,6 +128,7 @@
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
     }
 
+
     var q1 = "Which of the following information are you comfortable sharing with friends?"
     var q2 = "Which of the following information are you comfortable sharing with family?"
     var q3 = "Which of the following information are you comfortable sharing with employers?"
@@ -150,8 +140,19 @@
             document.getElementById("questions").innerHTML = quest;
             document.getElementById("frameUpdate").src = url;
             document.getElementById("downloaded").src = photo;
-
         }
+
+    function nextNav(){
+
+      if (document.getElementById("downloaded").src = '../images/friends.png') {
+
+        frameNav(q2, '../pg1/pg1.html', '../images/family.png');
+      }
+
+
+    }
+
+  
 
   
     </script>
