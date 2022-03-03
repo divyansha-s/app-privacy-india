@@ -14,31 +14,41 @@
     <!-- Custom styles for this template -->
     <link href="index.css" rel="stylesheet">
 
-
   </head>
   <body>
 
 
 
-<h1 class = "text-center">Privacy Feelings</h2>
-<br>
+<h1 class = "display-4 text-center">Privacy Contexts</h1>
 <br>
 
 <!-- split page -->
 <div class="container">
   <div class = "row align-items-start flex-wrap">
 
+    <div class = "col-1"></div>
+
     <!-- col 1 -->
-    <div class = "col-md-6 border bg-light p-5 rounded align-self-center"> 
-          <h3 id = "questions">  Which of the following information are you comfortable sharing with friends? </h3>
+    <div class = "col-md-6">
+      <h2 id = "heading">Friends</h2>
+        <br>
+    <div class = "border bg-light p-5 rounded align-self-center"> 
+          <h4 id = "questions">  Which of the following information are you comfortable sharing with friends? </h4>
           
     </div>
+
+    <br>
+    <div>  
+        <iframe class="embed-responsive-item w-100" id = "frameUpdate" src="../pg1/pg1.html" onload="resizeIframe(this)"></iframe>
+      </div>
+
+  </div>
 
     <div class = "col"></div>
 
     <!-- col 3 -->
 
-    <div class="col-md-5">
+    <div class="col-md-4">
      <img src="../images/friends.png" id = "downloaded" class = "img-fluid" alt="An image with friends">
       </div>
 
@@ -51,10 +61,6 @@
       <div class="row">
 
       <div class = "col-2"></div>
-
-      <div class = "col">  
-        <iframe class="embed-responsive-item w-100" id = "frameUpdate" src="../pg1/pg1.html" onload="resizeIframe(this)"></iframe>
-      </div>
 
     </div>
 
@@ -70,15 +76,17 @@
         
             <nav aria-label="iphoneQuestions">
             <ul class="pagination">
-              <li class="page-item page-link" onclick = "frameNav(q1, '../pg1/pg1.html', '../images/friends.png')">
-               1 </li>
-              <li class="page-item page-link" onclick = "frameNav(q2, '../pg1/pg1.html', '../images/family.png')">
+              <li class="page-item page-link" id = "click1" aria-current="page" onclick = "frameNav(q1, '../pg1/pg1.html', '../images/friends.png', 'Friends')">1 
+              </li>
+              <li class="page-item page-link" id = "click2" onclick = "frameNav(q2, '../pg1/pg1.html', '../images/family.png', 'Family')">
                   2
               </li>
-              <li class="page-item page-link" onclick = "frameNav(q3, '../pg1/pg1.html', '../images/employers.png')">3</li>
-              <li class="page-item page-link" onclick = "frameNav(q4, '../pg1/pg1.html', '../images/gov.png')">4</li>
-              <li class="page-item page-link" onclick = "frameNav(q5, '../pg1/pg1.html', '../images/law enforcement.png')">5</li>
-
+              <li class="page-item page-link" id = "click3" onclick = "frameNav(q3, '../pg1/pg1.html', '../images/employers.png', 'Employers')">3
+              </li>
+              <li class="page-item page-link" id = "click4" onclick = "frameNav(q4, '../pg1/pg1.html', '../images/gov.png', 'Government')">4
+              </li>
+              <li class="page-item page-link" id = "click5" onclick = "frameNav(q5, '../pg1/pg1.html', '../images/law enforcement.png', 'Law Enforcement')">5
+              </li>
                <li class="page-item">
                 <a class="page-link" href="viz.html"> Apps </a>
               
@@ -136,11 +144,13 @@
     var q4 = "Which of the following information are you comfortable sharing with government?"
     var q5 = "Which of the following information are you comfortable sharing with law enforcement?"
 
-    function frameNav(quest, url, photo) {
+    function frameNav(quest, url, photo, hd) {
 
             document.getElementById("questions").innerHTML = quest;
             document.getElementById("frameUpdate").src = url;
             document.getElementById("downloaded").src = photo;
+            document.getElementById("heading").innerHTML = hd;
+
         }
 
     function nextNav(){

@@ -1,9 +1,15 @@
-/* Show it is fixed to the top 
+/* Show it is fixed to the top */
 body {
   
-  padding-top: 4.5rem;
+  padding-top: 1.0rem;
 }
-*/
+
+
+/*
+h1, h2, h3, h4{
+  font-family: Georgia, serif;
+}
+
 
 /*
 .centered {
